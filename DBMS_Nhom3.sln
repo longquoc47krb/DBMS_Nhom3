@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1401
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBMS_Nhom3", "DBMS_Nhom3\DBMS_Nhom3.csproj", "{522F49C6-B952-464D-BA46-5C25A00C5F3D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{522F49C6-B952-464D-BA46-5C25A00C5F3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{522F49C6-B952-464D-BA46-5C25A00C5F3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{522F49C6-B952-464D-BA46-5C25A00C5F3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{522F49C6-B952-464D-BA46-5C25A00C5F3D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CF9C36C-6F6E-4749-961A-CE397E8A3467}
+	EndGlobalSection
+EndGlobal
