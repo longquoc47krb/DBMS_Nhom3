@@ -15,7 +15,11 @@ namespace DBMS_Nhom3
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new Form_Login());
+=======
+            Application.Run(new Form_Home());
+>>>>>>> df2a24cada480bf2849ea6abcfe209d00758ac6a
         }
     }
 }
