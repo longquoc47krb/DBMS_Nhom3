@@ -14,5 +14,45 @@ namespace DBMS_Nhom3
         {
             InitializeComponent();
         }
+
+        private void customerDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addNewPhoneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void phoneDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void infomationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void benefitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void changePassWordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addNewAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void manageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

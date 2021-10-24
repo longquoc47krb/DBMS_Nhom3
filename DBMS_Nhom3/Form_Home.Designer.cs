@@ -29,12 +29,140 @@ namespace DBMS_Nhom3
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Home));
+            this.menu_Home = new System.Windows.Forms.MenuStrip();
+            this.addTransactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transactionDetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.customerDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addNewPhoneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.phoneDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.infomationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.benefitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePassWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addNewAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_Home.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // menu_Home
+            // 
+            this.menu_Home.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menu_Home.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addTransactionToolStripMenuItem,
+            this.transactionDetailToolStripMenuItem,
+            this.addNewPhoneToolStripMenuItem,
+            this.phoneDetailsToolStripMenuItem,
+            this.infomationToolStripMenuItem,
+            this.benefitToolStripMenuItem,
+            this.accountToolStripMenuItem});
+            this.menu_Home.Location = new System.Drawing.Point(0, 0);
+            this.menu_Home.Name = "menu_Home";
+            this.menu_Home.Size = new System.Drawing.Size(1027, 29);
+            this.menu_Home.TabIndex = 2;
+            this.menu_Home.Text = "menuStrip1";
+            // 
+            // addTransactionToolStripMenuItem
+            // 
+            this.addTransactionToolStripMenuItem.Name = "addTransactionToolStripMenuItem";
+            this.addTransactionToolStripMenuItem.Size = new System.Drawing.Size(143, 25);
+            this.addTransactionToolStripMenuItem.Text = "Add transaction";
+            // 
+            // transactionDetailToolStripMenuItem
+            // 
+            this.transactionDetailToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.customerDetailsToolStripMenuItem});
+            this.transactionDetailToolStripMenuItem.Name = "transactionDetailToolStripMenuItem";
+            this.transactionDetailToolStripMenuItem.Size = new System.Drawing.Size(165, 25);
+            this.transactionDetailToolStripMenuItem.Text = "Transaction details";
+            // 
+            // customerDetailsToolStripMenuItem
+            // 
+            this.customerDetailsToolStripMenuItem.Name = "customerDetailsToolStripMenuItem";
+            this.customerDetailsToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.customerDetailsToolStripMenuItem.Text = "Customer_Details";
+            // 
+            // addNewPhoneToolStripMenuItem
+            // 
+            this.addNewPhoneToolStripMenuItem.Name = "addNewPhoneToolStripMenuItem";
+            this.addNewPhoneToolStripMenuItem.Size = new System.Drawing.Size(268, 25);
+            this.addNewPhoneToolStripMenuItem.Text = "Add new electronic components";
+            // 
+            // phoneDetailsToolStripMenuItem
+            // 
+            this.phoneDetailsToolStripMenuItem.Name = "phoneDetailsToolStripMenuItem";
+            this.phoneDetailsToolStripMenuItem.Size = new System.Drawing.Size(252, 25);
+            this.phoneDetailsToolStripMenuItem.Text = "electronic components details";
+            // 
+            // infomationToolStripMenuItem
+            // 
+            this.infomationToolStripMenuItem.Name = "infomationToolStripMenuItem";
+            this.infomationToolStripMenuItem.Size = new System.Drawing.Size(108, 25);
+            this.infomationToolStripMenuItem.Text = "Infomation";
+            // 
+            // benefitToolStripMenuItem
+            // 
+            this.benefitToolStripMenuItem.Name = "benefitToolStripMenuItem";
+            this.benefitToolStripMenuItem.Size = new System.Drawing.Size(77, 25);
+            this.benefitToolStripMenuItem.Text = "Benefit";
+            // 
+            // accountToolStripMenuItem
+            // 
+            this.accountToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.changePassWordToolStripMenuItem,
+            this.addNewAccountToolStripMenuItem,
+            this.manageToolStripMenuItem});
+            this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
+            this.accountToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
+            this.accountToolStripMenuItem.Text = "Account";
+            // 
+            // changePassWordToolStripMenuItem
+            // 
+            this.changePassWordToolStripMenuItem.Name = "changePassWordToolStripMenuItem";
+            this.changePassWordToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.changePassWordToolStripMenuItem.Text = "ChangePassWord";
+            // 
+            // addNewAccountToolStripMenuItem
+            // 
+            this.addNewAccountToolStripMenuItem.Name = "addNewAccountToolStripMenuItem";
+            this.addNewAccountToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.addNewAccountToolStripMenuItem.Text = "Add New Account";
+            // 
+            // manageToolStripMenuItem
+            // 
+            this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
+            this.manageToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.manageToolStripMenuItem.Text = "Manage";
+            // 
+            // Form_Home
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1027, 450);
+            this.Controls.Add(this.menu_Home);
+            this.Name = "Form_Home";
             this.Text = "Form_Home";
+            this.menu_Home.ResumeLayout(false);
+            this.menu_Home.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.MenuStrip menu_Home;
+        private System.Windows.Forms.ToolStripMenuItem addTransactionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem transactionDetailToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem customerDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addNewPhoneToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem phoneDetailsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem infomationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem benefitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changePassWordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addNewAccountToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageToolStripMenuItem;
     }
 }
