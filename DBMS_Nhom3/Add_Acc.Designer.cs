@@ -46,6 +46,7 @@ namespace DBMS_Nhom3
             this.Reset_Button.TabIndex = 15;
             this.Reset_Button.Text = "Reset";
             this.Reset_Button.UseVisualStyleBackColor = true;
+            this.Reset_Button.Click += new System.EventHandler(this.Reset_Button_Click);
             // 
             // Yes_Button
             // 
@@ -55,6 +56,7 @@ namespace DBMS_Nhom3
             this.Yes_Button.TabIndex = 14;
             this.Yes_Button.Text = "Yes";
             this.Yes_Button.UseVisualStyleBackColor = true;
+            this.Yes_Button.Click += new System.EventHandler(this.Yes_Button_Click);
             // 
             // label4
             // 
