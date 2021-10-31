@@ -58,6 +58,7 @@ namespace DBMS_Nhom3
             this.btn_Login.TabIndex = 26;
             this.btn_Login.Text = "Login";
             this.btn_Login.UseVisualStyleBackColor = true;
+            this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
             // txt_Password
             // 
@@ -67,6 +68,7 @@ namespace DBMS_Nhom3
             this.txt_Password.PasswordChar = '*';
             this.txt_Password.Size = new System.Drawing.Size(172, 26);
             this.txt_Password.TabIndex = 25;
+            this.txt_Password.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.txt_Password_PreviewKeyDown);
             // 
             // txt_Username
             // 
