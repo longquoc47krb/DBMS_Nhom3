@@ -115,7 +115,10 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="BSLayer\" />
+    <Folder Include="DBLayer\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Resource\84f355b7203c4435a8bcdaad90553032.gif" />
     <Content Include="Resource\city.gif" />
