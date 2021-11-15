@@ -44,7 +44,8 @@ namespace DBMS_Nhom3
 
         private void changePassWordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Change_Pass_frm changepass = new Change_Pass_frm();
+            changepass.ShowDialog();
         }
 
         private void addNewAccountToolStripMenuItem_Click(object sender, EventArgs e)

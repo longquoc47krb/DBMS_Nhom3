@@ -45,5 +45,10 @@ namespace DBMS_Nhom3
         {
             LoadData();
         }
+
+        private void txt_ProductName_TextChanged(object sender, EventArgs e)
+        {
+            GridView_ProductRecord.DataSource = product.search_ProductName(Name_Textbox.Text).Tables[0];
+        }
     }
 }

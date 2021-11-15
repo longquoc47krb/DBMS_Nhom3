@@ -29,7 +29,6 @@ namespace DBMS_Nhom3
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_Edit = new System.Windows.Forms.Button();
             this.GridView_ProductRecord = new System.Windows.Forms.DataGridView();
@@ -37,16 +36,8 @@ namespace DBMS_Nhom3
             this.label2 = new System.Windows.Forms.Label();
             this.btn_Delete = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.phoneBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.phonesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.GridView_ProductRecord)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phoneBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phonesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -91,6 +82,7 @@ namespace DBMS_Nhom3
             this.txt_ProductName.Name = "txt_ProductName";
             this.txt_ProductName.Size = new System.Drawing.Size(210, 26);
             this.txt_ProductName.TabIndex = 63;
+            this.txt_ProductName.TextChanged += new System.EventHandler(this.txt_ProductName_TextChanged);
             // 
             // label2
             // 
@@ -126,22 +118,6 @@ namespace DBMS_Nhom3
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // phoneBindingSource
-            // 
-            this.phoneBindingSource.DataMember = "Phone";
-            // 
-            // phonesBindingSource
-            // 
-            this.phonesBindingSource.DataMember = "Phones";
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataMember = "Phone";
-            // 
-            // bindingSource2
-            // 
-            this.bindingSource2.DataMember = "Phones";
-            // 
             // Form_product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,10 +135,6 @@ namespace DBMS_Nhom3
             this.Load += new System.EventHandler(this.Form_product_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridView_ProductRecord)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phoneBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phonesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,9 +149,5 @@ namespace DBMS_Nhom3
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_Delete;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.BindingSource phoneBindingSource;
-        private System.Windows.Forms.BindingSource phonesBindingSource;
-        private System.Windows.Forms.BindingSource bindingSource1;
-        private System.Windows.Forms.BindingSource bindingSource2;
     }
 }

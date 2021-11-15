@@ -28,7 +28,7 @@ CREATE TABLE CongTySX
 
 CREATE TABLE Product
 (
-  Name_product VARCHAR NOT NULL,
+  Name_product VARCHAR(50) NOT NULL,
   ID_product INT NOT NULL,
   Price VARCHAR(50) NOT NULL,
   ID_company INT NOT NULL,

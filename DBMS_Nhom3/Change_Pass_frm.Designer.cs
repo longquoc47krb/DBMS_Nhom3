@@ -68,6 +68,7 @@ namespace DBMS_Nhom3
             this.Yes_Butoon.TabIndex = 9;
             this.Yes_Butoon.Text = "Yes";
             this.Yes_Butoon.UseVisualStyleBackColor = true;
+            this.Yes_Butoon.Click += new System.EventHandler(this.Yes_Butoon_Click);
             // 
             // cc2
             // 
