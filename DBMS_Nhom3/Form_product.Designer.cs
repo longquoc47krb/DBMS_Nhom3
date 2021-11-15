@@ -73,7 +73,7 @@ namespace DBMS_Nhom3
             this.GridView_ProductRecord.RowHeadersVisible = false;
             this.GridView_ProductRecord.Size = new System.Drawing.Size(400, 236);
             this.GridView_ProductRecord.TabIndex = 65;
-            this.GridView_ProductRecord.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_PhoneRecord_CellClick);
+            this.GridView_ProductRecord.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_ProductRecord_CellClick);
             // 
             // txt_ProductName
             // 

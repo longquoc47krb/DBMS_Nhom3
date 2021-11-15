@@ -13,6 +13,8 @@ namespace DBMS_Nhom3
     {
         public static string currentAccount = "";
         public static string currentPass = "";
+        private string admin_user = "admin";
+        private string pass_admin = "admin";
         public static bool isAdmin = false;
         public Form_Login()
         {

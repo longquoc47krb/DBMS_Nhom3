@@ -18,7 +18,8 @@ namespace DBMS_Nhom3
 
         private void addTransactionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            Form_AddTrans addtrans = new Form_AddTrans();
+            addtrans.ShowDialog();
         }
 
         private void transactionDetailToolStripMenuItem_Click(object sender, EventArgs e)

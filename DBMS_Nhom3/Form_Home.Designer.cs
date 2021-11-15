@@ -33,7 +33,6 @@ namespace DBMS_Nhom3
             this.menu_Home = new System.Windows.Forms.MenuStrip();
             this.addTransactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transactionDetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.customerDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewPhoneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phoneDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,18 +66,10 @@ namespace DBMS_Nhom3
             // 
             // transactionDetailToolStripMenuItem
             // 
-            this.transactionDetailToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.customerDetailsToolStripMenuItem});
             this.transactionDetailToolStripMenuItem.Name = "transactionDetailToolStripMenuItem";
             this.transactionDetailToolStripMenuItem.Size = new System.Drawing.Size(165, 25);
             this.transactionDetailToolStripMenuItem.Text = "Transaction details";
             this.transactionDetailToolStripMenuItem.Click += new System.EventHandler(this.transactionDetailToolStripMenuItem_Click);
-            // 
-            // customerDetailsToolStripMenuItem
-            // 
-            this.customerDetailsToolStripMenuItem.Name = "customerDetailsToolStripMenuItem";
-            this.customerDetailsToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
-            this.customerDetailsToolStripMenuItem.Text = "Customer_Details";
             // 
             // addNewPhoneToolStripMenuItem
             // 
@@ -146,7 +137,6 @@ namespace DBMS_Nhom3
         private System.Windows.Forms.MenuStrip menu_Home;
         private System.Windows.Forms.ToolStripMenuItem addTransactionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem transactionDetailToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem customerDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewPhoneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem phoneDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem;

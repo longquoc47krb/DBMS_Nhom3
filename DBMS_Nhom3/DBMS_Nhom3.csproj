@@ -97,6 +97,9 @@
     <EmbeddedResource Include="Change_Pass_frm.resx">
       <DependentUpon>Change_Pass_frm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_AddTrans.resx">
+      <DependentUpon>Form_AddTrans.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Home.resx">
       <DependentUpon>Form_Home.cs</DependentUpon>
     </EmbeddedResource>
