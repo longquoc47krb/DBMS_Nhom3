@@ -48,9 +48,9 @@ namespace DBMS_Nhom3.BSLayer
         }
 
         // them phone
-        public bool addCustomer(string cusname, string phonenumber, string address, int ID_customer)
+        public bool addCustomer(string cusname, string phonenumber)
         {
-            string sqlString = "Insert Into Customer Values('" + cusname + "','" + phonenumber + "','" + address + "','" + ID_customer.ToString() + "','No')";
+            string sqlString = "Insert Into Customer Values('" + cusname + "','" + phonenumber + "'," + (returnMaxID()+1).ToString() + ")";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         //xoa phone
@@ -60,9 +60,9 @@ namespace DBMS_Nhom3.BSLayer
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         // cap nhat phone
-        public bool updateCustomer(string cusname, string phonenumber, string address, string idcus, ref string err)
+        public bool updateCustomer(string cusname, string phonenumber, string idcus, ref string err)
         {
-            string sqlString = "Update Customer Set Customer_Name = '" + cusname + "',PhoneNumber = '" + phonenumber + "',Address = '" + address + "' where ID_customer = " + idcus.ToString();
+            string sqlString = "Update Customer Set Customer_Name = '" + cusname + "',PhoneNumber = '" + phonenumber + "',' where ID_customer = " + idcus.ToString();
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
 
