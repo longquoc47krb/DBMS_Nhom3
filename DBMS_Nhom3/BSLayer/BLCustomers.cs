@@ -1,50 +1,48 @@
-﻿using System;
+﻿using DBMS_Nhom3.DBLayer;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text;
 
 namespace DBMS_Nhom3.BSLayer
 {
     class BLCustomers
     {
-        public Table<Customer> GetCustomers()
+        DBMain db = null;
+        string err;
+        public BLCustomers()
         {
-
-            QuanLyBanHangDataContext qlBH = new QuanLyBanHangDataContext();
-
-
-            return qlBH.Customers;
+            db = new DBMain();
+        }
+        public DataSet GetCustomers()
+        {
+            return db.ExcuteQueryDataSet("select * from Customer", CommandType.Text);
         }
 
-        public IQueryable FindCustomer(string name, string phone, string address)
+        public DataSet FindCustomer(string name, string phone, string address)
         {
-            QuanLyBanHangDataContext qlBH = new QuanLyBanHangDataContext();
-            var Query = (from item in qlBH.Customers
-                         where item.Customer_Name == name & item.PhoneNumber == phone & item.Address == address
-                         select item);
-            return Query;
+            return db.ExcuteQueryDataSet("select * from Customer where Customer_Name= '" + name + "' and PhoneNumber = '" + phone + "' and Address= '" + address + "'", CommandType.Text);
         }
 
-        public IQueryable FindCustomer_SDT(string phone)
+        public DataSet FindCustomer_SDT(string phone)
         {
-            QuanLyBanHangDataContext qlBH = new QuanLyBanHangDataContext();
-            var Query = (from item in qlBH.Customers
-                         where item.PhoneNumber.StartsWith(phone)
-                         select item);
-            return Query;
+            return db.ExcuteQueryDataSet("select * from Customer where PhoneNumber like '" + phone + "%'", CommandType.Text);
         }
 
         public int returnMaxID()
         {
-            QuanLyBanHangDataContext qlBH = new QuanLyBanHangDataContext();
-            var query = (from item in qlBH.Customers
-                         select item.ID_customer).Max();
+            string sqlString = "select max(ID_customer) as max_id from Customer";
+            DataSet ds = db.ExcuteQueryDataSet(sqlString, CommandType.Text);
             try
             {
-                return query;
+                if (ds == null || ds.Tables.Count == 0 || ds.Tables[0].Rows.Count == 0)
+                    return 0;
+                else
+                    return int.Parse(ds.Tables[0].Rows[0]["max_id"].ToString());
             }
-            catch
+            catch (Exception error)
             {
-                return -1;
+                return 0;
             }
 
         }
@@ -52,59 +50,21 @@ namespace DBMS_Nhom3.BSLayer
         // them phone
         public bool addCustomer(string cusname, string phonenumber, string address, int ID_customer)
         {
-            QuanLyBanHangDataContext qlBH = new QuanLyBanHangDataContext(); 
-            Customer cus = new Customer();
-            cus.ID_customer = ID_customer;
-            cus.Customer_Name = cusname;
-            cus.PhoneNumber = phonenumber;
-            cus.Address = address;
-            cus.Loyal_customer = "No";
-            qlBH.Customers.InsertOnSubmit(cus);
-            qlBH.Customers.Context.SubmitChanges();
-            return true;
-
-
-
+            string sqlString = "Insert Into Customer Values('" + cusname + "','" + phonenumber + "','" + address + "','" + ID_customer.ToString() + "','No')";
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         //xoa phone
         public bool deleteCustomer(ref string err, int ID_customer)
         {
-            QuanLyBanHangDataContext qlBH = new QuanLyBanHangDataContext();
-
-            var Query = from item in qlBH.Customers
-                        where item.ID_customer == ID_customer
-                        select item;
-
-            qlBH.Customers.DeleteAllOnSubmit(Query);
-            qlBH.SubmitChanges();
-            return true;
+            string sqlString = "Delete From Customer where ID_customer = " + ID_customer.ToString();
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         // cap nhat phone
         public bool updateCustomer(string cusname, string phonenumber, string address, string idcus, ref string err)
         {
-            QuanLyBanHangDataContext qlBH = new QuanLyBanHangDataContext();
-            var Query = (from item in qlBH.Customers
-                         where item.ID_customer == int.Parse(idcus)
-                         select item).SingleOrDefault();
-
-            if (Query != null)
-            {
-                Query.ID_customer = int.Parse(idcus);
-                Query.Customer_Name = cusname;
-                Query.PhoneNumber = phonenumber;
-                Query.Address = address;
-                try
-                {
-                    qlBH.SubmitChanges();
-                }
-                catch
-                {
-                    return false;
-                }
-
-            }
-
-            return true;
+            string sqlString = "Update Customer Set Customer_Name = '" + cusname + "',PhoneNumber = '" + phonenumber + "',Address = '" + address + "' where ID_customer = " + idcus.ToString();
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
+
     }
 }
