@@ -53,5 +53,10 @@ namespace DBMS_Nhom3
         {
             dataGridView1.DataSource = acc.FindStaff(Name_Textbox.Text).Tables[0];
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -33,7 +33,8 @@ namespace DBMS_Nhom3
 
         private void phoneDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form_product f_product = new Form_product();
+            f_product.ShowDialog();
         }
 
         private void infomationToolStripMenuItem_Click(object sender, EventArgs e)

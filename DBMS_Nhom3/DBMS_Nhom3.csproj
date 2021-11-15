@@ -58,13 +58,13 @@
     <Compile Include="Change_Pass_frm.Designer.cs">
       <DependentUpon>Change_Pass_frm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer_Details.cs">
+    <Compile Include="DBLayer\DBMain.cs" />
+    <Compile Include="Form_AddTrans.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customer_Details.Designer.cs">
-      <DependentUpon>Customer_Details.cs</DependentUpon>
+    <Compile Include="Form_AddTrans.Designer.cs">
+      <DependentUpon>Form_AddTrans.cs</DependentUpon>
     </Compile>
-    <Compile Include="DBLayer\DBMain.cs" />
     <Compile Include="Form_Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +76,12 @@
     </Compile>
     <Compile Include="Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_product.Designer.cs">
+      <DependentUpon>Form_product.cs</DependentUpon>
     </Compile>
     <Compile Include="Manage_Staff.cs">
       <SubType>Form</SubType>
@@ -91,14 +97,14 @@
     <EmbeddedResource Include="Change_Pass_frm.resx">
       <DependentUpon>Change_Pass_frm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customer_Details.resx">
-      <DependentUpon>Customer_Details.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form_Home.resx">
       <DependentUpon>Form_Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_product.resx">
+      <DependentUpon>Form_product.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage_Staff.resx">
       <DependentUpon>Manage_Staff.cs</DependentUpon>
