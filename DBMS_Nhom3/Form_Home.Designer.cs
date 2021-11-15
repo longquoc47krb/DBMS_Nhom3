@@ -36,8 +36,6 @@ namespace DBMS_Nhom3
             this.customerDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewPhoneToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phoneDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.infomationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.benefitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePassWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,8 +51,6 @@ namespace DBMS_Nhom3
             this.transactionDetailToolStripMenuItem,
             this.addNewPhoneToolStripMenuItem,
             this.phoneDetailsToolStripMenuItem,
-            this.infomationToolStripMenuItem,
-            this.benefitToolStripMenuItem,
             this.accountToolStripMenuItem});
             this.menu_Home.Location = new System.Drawing.Point(0, 0);
             this.menu_Home.Name = "menu_Home";
@@ -67,6 +63,7 @@ namespace DBMS_Nhom3
             this.addTransactionToolStripMenuItem.Name = "addTransactionToolStripMenuItem";
             this.addTransactionToolStripMenuItem.Size = new System.Drawing.Size(143, 25);
             this.addTransactionToolStripMenuItem.Text = "Add transaction";
+            this.addTransactionToolStripMenuItem.Click += new System.EventHandler(this.addTransactionToolStripMenuItem_Click);
             // 
             // transactionDetailToolStripMenuItem
             // 
@@ -75,6 +72,7 @@ namespace DBMS_Nhom3
             this.transactionDetailToolStripMenuItem.Name = "transactionDetailToolStripMenuItem";
             this.transactionDetailToolStripMenuItem.Size = new System.Drawing.Size(165, 25);
             this.transactionDetailToolStripMenuItem.Text = "Transaction details";
+            this.transactionDetailToolStripMenuItem.Click += new System.EventHandler(this.transactionDetailToolStripMenuItem_Click);
             // 
             // customerDetailsToolStripMenuItem
             // 
@@ -87,24 +85,14 @@ namespace DBMS_Nhom3
             this.addNewPhoneToolStripMenuItem.Name = "addNewPhoneToolStripMenuItem";
             this.addNewPhoneToolStripMenuItem.Size = new System.Drawing.Size(268, 25);
             this.addNewPhoneToolStripMenuItem.Text = "Add new electronic components";
+            this.addNewPhoneToolStripMenuItem.Click += new System.EventHandler(this.addNewPhoneToolStripMenuItem_Click);
             // 
             // phoneDetailsToolStripMenuItem
             // 
             this.phoneDetailsToolStripMenuItem.Name = "phoneDetailsToolStripMenuItem";
             this.phoneDetailsToolStripMenuItem.Size = new System.Drawing.Size(252, 25);
             this.phoneDetailsToolStripMenuItem.Text = "electronic components details";
-            // 
-            // infomationToolStripMenuItem
-            // 
-            this.infomationToolStripMenuItem.Name = "infomationToolStripMenuItem";
-            this.infomationToolStripMenuItem.Size = new System.Drawing.Size(108, 25);
-            this.infomationToolStripMenuItem.Text = "Infomation";
-            // 
-            // benefitToolStripMenuItem
-            // 
-            this.benefitToolStripMenuItem.Name = "benefitToolStripMenuItem";
-            this.benefitToolStripMenuItem.Size = new System.Drawing.Size(77, 25);
-            this.benefitToolStripMenuItem.Text = "Benefit";
+            this.phoneDetailsToolStripMenuItem.Click += new System.EventHandler(this.phoneDetailsToolStripMenuItem_Click);
             // 
             // accountToolStripMenuItem
             // 
@@ -119,20 +107,23 @@ namespace DBMS_Nhom3
             // changePassWordToolStripMenuItem
             // 
             this.changePassWordToolStripMenuItem.Name = "changePassWordToolStripMenuItem";
-            this.changePassWordToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.changePassWordToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
             this.changePassWordToolStripMenuItem.Text = "ChangePassWord";
+            this.changePassWordToolStripMenuItem.Click += new System.EventHandler(this.changePassWordToolStripMenuItem_Click);
             // 
             // addNewAccountToolStripMenuItem
             // 
             this.addNewAccountToolStripMenuItem.Name = "addNewAccountToolStripMenuItem";
-            this.addNewAccountToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
-            this.addNewAccountToolStripMenuItem.Text = "Add New Account";
+            this.addNewAccountToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.addNewAccountToolStripMenuItem.Text = "Add New Staff";
+            this.addNewAccountToolStripMenuItem.Click += new System.EventHandler(this.addNewAccountToolStripMenuItem_Click);
             // 
             // manageToolStripMenuItem
             // 
             this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
-            this.manageToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.manageToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
             this.manageToolStripMenuItem.Text = "Manage";
+            this.manageToolStripMenuItem.Click += new System.EventHandler(this.manageToolStripMenuItem_Click);
             // 
             // Form_Home
             // 
@@ -158,8 +149,6 @@ namespace DBMS_Nhom3
         private System.Windows.Forms.ToolStripMenuItem customerDetailsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewPhoneToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem phoneDetailsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem infomationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem benefitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePassWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewAccountToolStripMenuItem;

@@ -15,7 +15,13 @@ namespace DBMS_Nhom3
             InitializeComponent();
         }
 
-        private void customerDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void addTransactionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void transactionDetailToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
@@ -35,11 +41,6 @@ namespace DBMS_Nhom3
 
         }
 
-        private void benefitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void changePassWordToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -52,6 +53,15 @@ namespace DBMS_Nhom3
 
         private void manageToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (Form_Login.isAdmin)
+            {
+                Manage_Staff acc = new Manage_Staff();
+                acc.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("You are not the Administrator");
+            }
 
         }
     }

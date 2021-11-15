@@ -40,12 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add_Acc.cs">
+    <Compile Include="Add_Staff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Add_Acc.Designer.cs">
-      <DependentUpon>Add_Acc.cs</DependentUpon>
+    <Compile Include="Add_Staff.Designer.cs">
+      <DependentUpon>Add_Staff.cs</DependentUpon>
     </Compile>
+    <Compile Include="BSLayer\BLStaff.cs" />
+    <Compile Include="BSLayer\BLCustomers.cs" />
+    <Compile Include="BSLayer\BLProduct.cs" />
+    <Compile Include="BSLayer\BLTransaction.cs" />
+    <Compile Include="BSLayer\BLTransaction_Details.cs" />
+    <Compile Include="BSLayer\CongTySX.cs" />
     <Compile Include="Change_Pass_frm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +64,7 @@
     <Compile Include="Customer_Details.Designer.cs">
       <DependentUpon>Customer_Details.cs</DependentUpon>
     </Compile>
+    <Compile Include="DBLayer\DBMain.cs" />
     <Compile Include="Form_Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,16 +77,16 @@
     <Compile Include="Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manage_Acc.cs">
+    <Compile Include="Manage_Staff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manage_Acc.Designer.cs">
-      <DependentUpon>Manage_Acc.cs</DependentUpon>
+    <Compile Include="Manage_Staff.Designer.cs">
+      <DependentUpon>Manage_Staff.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Add_Acc.resx">
-      <DependentUpon>Add_Acc.cs</DependentUpon>
+    <EmbeddedResource Include="Add_Staff.resx">
+      <DependentUpon>Add_Staff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Change_Pass_frm.resx">
       <DependentUpon>Change_Pass_frm.cs</DependentUpon>
@@ -93,8 +100,8 @@
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manage_Acc.resx">
-      <DependentUpon>Manage_Acc.cs</DependentUpon>
+    <EmbeddedResource Include="Manage_Staff.resx">
+      <DependentUpon>Manage_Staff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -115,10 +122,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BSLayer\" />
-    <Folder Include="DBLayer\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Resource\84f355b7203c4435a8bcdaad90553032.gif" />
     <Content Include="Resource\city.gif" />
