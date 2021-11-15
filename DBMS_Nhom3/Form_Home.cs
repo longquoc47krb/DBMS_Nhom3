@@ -48,7 +48,15 @@ namespace DBMS_Nhom3
 
         private void addNewAccountToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (Form_Login.isAdmin)
+            {
+                Add_Staff add_Acc = new Add_Staff();
+                add_Acc.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("You are not the Administrator");
+            }
         }
 
         private void manageToolStripMenuItem_Click(object sender, EventArgs e)

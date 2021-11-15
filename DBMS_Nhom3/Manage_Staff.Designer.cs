@@ -41,6 +41,7 @@ namespace DBMS_Nhom3
             this.Name_Textbox.Name = "Name_Textbox";
             this.Name_Textbox.Size = new System.Drawing.Size(449, 20);
             this.Name_Textbox.TabIndex = 5;
+            this.Name_Textbox.TextChanged += new System.EventHandler(this.Name_Textbox_TextChanged);
             // 
             // Delete_Button
             // 
@@ -59,6 +60,7 @@ namespace DBMS_Nhom3
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(573, 283);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // Manage_Staff
             // 

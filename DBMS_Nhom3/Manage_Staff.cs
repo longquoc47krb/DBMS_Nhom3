@@ -24,12 +24,34 @@ namespace DBMS_Nhom3
         }
         private void Delete_Button_Click(object sender, EventArgs e)
         {
-
+            acc.deleteAccount(ref x, name_delete);
+            LoadData();
         }
 
         private void Manage_Staff_Load(object sender, EventArgs e)
         {
             LoadData();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                int a = dataGridView1.CurrentCell.RowIndex;
+                if (dataGridView1.Rows[a].Cells[0].Value != null)
+                {
+                    // gán model name trong datagridview đã chọn
+                    name_delete = dataGridView1.Rows[a].Cells[0].Value.ToString();
+                    Name_Textbox.Text = name_delete;
+                    //label3.Text = Phone_Id;
+                }
+            }
+            catch { }
+        }
+
+        private void Name_Textbox_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = acc.FindStaff(Name_Textbox.Text).Tables[0];
         }
     }
 }

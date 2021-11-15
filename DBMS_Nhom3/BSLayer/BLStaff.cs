@@ -70,7 +70,7 @@ namespace DBMS_Nhom3.BSLayer
         //xoa phone
         public bool deleteAccount(ref string err, string user)
         {
-            string sqlString = "Delete From Accounts where username = '" + user + "'";
+            string sqlString = "Delete From Staff where username = '" + user + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         // cap nhat phone
