@@ -2,7 +2,6 @@ CREATE TABLE Customer
 (
   Customer_Name VARCHAR(50) NOT NULL,
   PhoneNumber VARCHAR(50) NOT NULL,
-  Address VARCHAR(50) NOT NULL,
   ID_customer INT NOT NULL,
   PRIMARY KEY (ID_customer)
 );
