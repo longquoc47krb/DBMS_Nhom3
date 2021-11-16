@@ -34,7 +34,7 @@ namespace DBMS_Nhom3
             this.dtpk_BuyDate = new System.Windows.Forms.DateTimePicker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Phone_Number_Textbox = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.product_label = new System.Windows.Forms.Label();
             this.Address_Textbox = new System.Windows.Forms.TextBox();
             this.Name_Textbox = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -51,19 +51,23 @@ namespace DBMS_Nhom3
             this.Total_Cost_Textbox = new System.Windows.Forms.TextBox();
             this.Total_Price_Label = new System.Windows.Forms.Label();
             this.GridView_Cart = new System.Windows.Forms.DataGridView();
-            this.Phone_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Customer_Panel = new System.Windows.Forms.Panel();
             this.Export_Button = new System.Windows.Forms.Button();
             this.Phone_Info_Panel = new System.Windows.Forms.Panel();
-            this.Add_Phone_Button = new System.Windows.Forms.Button();
-            this.Phone_Inf_Label = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.quantity_numericUpDown = new System.Windows.Forms.NumericUpDown();
             this.GridView_ProductRecord = new System.Windows.Forms.DataGridView();
+            this.Add_Product_Button = new System.Windows.Forms.Button();
+            this.Phone_Inf_Label = new System.Windows.Forms.Label();
+            this.Product_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridView_Cart)).BeginInit();
             this.Customer_Panel.SuspendLayout();
             this.Phone_Info_Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.quantity_numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridView_ProductRecord)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,14 +112,14 @@ namespace DBMS_Nhom3
             this.Phone_Number_Textbox.Size = new System.Drawing.Size(270, 13);
             this.Phone_Number_Textbox.TabIndex = 10;
             // 
-            // label9
+            // product_label
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(10, 32);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(75, 13);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Product Name";
+            this.product_label.AutoSize = true;
+            this.product_label.Location = new System.Drawing.Point(10, 32);
+            this.product_label.Name = "product_label";
+            this.product_label.Size = new System.Drawing.Size(75, 13);
+            this.product_label.TabIndex = 15;
+            this.product_label.Text = "Product Name";
             // 
             // Address_Textbox
             // 
@@ -224,7 +228,7 @@ namespace DBMS_Nhom3
             // 
             // Reset_Button
             // 
-            this.Reset_Button.Location = new System.Drawing.Point(547, 297);
+            this.Reset_Button.Location = new System.Drawing.Point(594, 297);
             this.Reset_Button.Name = "Reset_Button";
             this.Reset_Button.Size = new System.Drawing.Size(75, 46);
             this.Reset_Button.TabIndex = 35;
@@ -233,7 +237,7 @@ namespace DBMS_Nhom3
             // 
             // Remove_Button
             // 
-            this.Remove_Button.Location = new System.Drawing.Point(383, 297);
+            this.Remove_Button.Location = new System.Drawing.Point(387, 297);
             this.Remove_Button.Name = "Remove_Button";
             this.Remove_Button.Size = new System.Drawing.Size(75, 46);
             this.Remove_Button.TabIndex = 34;
@@ -244,16 +248,16 @@ namespace DBMS_Nhom3
             // 
             this.Total_Cost_Textbox.Enabled = false;
             this.Total_Cost_Textbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Total_Cost_Textbox.Location = new System.Drawing.Point(383, 404);
+            this.Total_Cost_Textbox.Location = new System.Drawing.Point(391, 392);
             this.Total_Cost_Textbox.Name = "Total_Cost_Textbox";
-            this.Total_Cost_Textbox.Size = new System.Drawing.Size(288, 27);
+            this.Total_Cost_Textbox.Size = new System.Drawing.Size(312, 27);
             this.Total_Cost_Textbox.TabIndex = 32;
             // 
             // Total_Price_Label
             // 
             this.Total_Price_Label.AutoSize = true;
             this.Total_Price_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Total_Price_Label.Location = new System.Drawing.Point(382, 370);
+            this.Total_Price_Label.Location = new System.Drawing.Point(387, 366);
             this.Total_Price_Label.Name = "Total_Price_Label";
             this.Total_Price_Label.Size = new System.Drawing.Size(56, 24);
             this.Total_Price_Label.TabIndex = 31;
@@ -264,39 +268,16 @@ namespace DBMS_Nhom3
             this.GridView_Cart.BackgroundColor = System.Drawing.SystemColors.Control;
             this.GridView_Cart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridView_Cart.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Phone_Column,
+            this.Product_Column,
+            this.ID,
             this.Price_Column,
             this.Quantity_Column});
-            this.GridView_Cart.Location = new System.Drawing.Point(12, 209);
+            this.GridView_Cart.Location = new System.Drawing.Point(1, 203);
             this.GridView_Cart.Name = "GridView_Cart";
             this.GridView_Cart.RowHeadersVisible = false;
             this.GridView_Cart.RowHeadersWidth = 51;
-            this.GridView_Cart.Size = new System.Drawing.Size(354, 229);
+            this.GridView_Cart.Size = new System.Drawing.Size(380, 229);
             this.GridView_Cart.TabIndex = 30;
-            // 
-            // Phone_Column
-            // 
-            this.Phone_Column.HeaderText = "Phone";
-            this.Phone_Column.MinimumWidth = 6;
-            this.Phone_Column.Name = "Phone_Column";
-            this.Phone_Column.ReadOnly = true;
-            this.Phone_Column.Width = 175;
-            // 
-            // Price_Column
-            // 
-            this.Price_Column.HeaderText = "Price (vnđ)";
-            this.Price_Column.MinimumWidth = 6;
-            this.Price_Column.Name = "Price_Column";
-            this.Price_Column.ReadOnly = true;
-            this.Price_Column.Width = 125;
-            // 
-            // Quantity_Column
-            // 
-            this.Quantity_Column.HeaderText = "Quantity";
-            this.Quantity_Column.MinimumWidth = 6;
-            this.Quantity_Column.Name = "Quantity_Column";
-            this.Quantity_Column.ReadOnly = true;
-            this.Quantity_Column.Width = 50;
             // 
             // Customer_Panel
             // 
@@ -317,7 +298,7 @@ namespace DBMS_Nhom3
             this.Customer_Panel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Customer_Panel.Location = new System.Drawing.Point(13, 12);
             this.Customer_Panel.Name = "Customer_Panel";
-            this.Customer_Panel.Size = new System.Drawing.Size(353, 168);
+            this.Customer_Panel.Size = new System.Drawing.Size(368, 168);
             this.Customer_Panel.TabIndex = 28;
             // 
             // Export_Button
@@ -325,9 +306,9 @@ namespace DBMS_Nhom3
             this.Export_Button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Export_Button.BackgroundImage")));
             this.Export_Button.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Export_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Export_Button.Location = new System.Drawing.Point(680, 320);
+            this.Export_Button.Location = new System.Drawing.Point(709, 320);
             this.Export_Button.Name = "Export_Button";
-            this.Export_Button.Size = new System.Drawing.Size(114, 111);
+            this.Export_Button.Size = new System.Drawing.Size(85, 99);
             this.Export_Button.TabIndex = 33;
             this.Export_Button.Text = "OK - Deal";
             this.Export_Button.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -336,24 +317,59 @@ namespace DBMS_Nhom3
             // Phone_Info_Panel
             // 
             this.Phone_Info_Panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Phone_Info_Panel.Controls.Add(this.label1);
+            this.Phone_Info_Panel.Controls.Add(this.quantity_numericUpDown);
             this.Phone_Info_Panel.Controls.Add(this.GridView_ProductRecord);
-            this.Phone_Info_Panel.Controls.Add(this.label9);
+            this.Phone_Info_Panel.Controls.Add(this.product_label);
             this.Phone_Info_Panel.Controls.Add(this.Product_Search_Textbox);
-            this.Phone_Info_Panel.Controls.Add(this.Add_Phone_Button);
+            this.Phone_Info_Panel.Controls.Add(this.Add_Product_Button);
             this.Phone_Info_Panel.Controls.Add(this.Phone_Inf_Label);
-            this.Phone_Info_Panel.Location = new System.Drawing.Point(372, 12);
+            this.Phone_Info_Panel.Location = new System.Drawing.Point(387, 12);
             this.Phone_Info_Panel.Name = "Phone_Info_Panel";
-            this.Phone_Info_Panel.Size = new System.Drawing.Size(422, 279);
+            this.Phone_Info_Panel.Size = new System.Drawing.Size(407, 279);
             this.Phone_Info_Panel.TabIndex = 29;
             // 
-            // Add_Phone_Button
+            // label1
             // 
-            this.Add_Phone_Button.Location = new System.Drawing.Point(328, 246);
-            this.Add_Phone_Button.Name = "Add_Phone_Button";
-            this.Add_Phone_Button.Size = new System.Drawing.Size(85, 25);
-            this.Add_Phone_Button.TabIndex = 9;
-            this.Add_Phone_Button.Text = "Add";
-            this.Add_Phone_Button.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(25, 258);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.TabIndex = 68;
+            this.label1.Text = "Quantity_label";
+            // 
+            // quantity_numericUpDown
+            // 
+            this.quantity_numericUpDown.Location = new System.Drawing.Point(123, 251);
+            this.quantity_numericUpDown.Name = "quantity_numericUpDown";
+            this.quantity_numericUpDown.Size = new System.Drawing.Size(69, 20);
+            this.quantity_numericUpDown.TabIndex = 67;
+            this.quantity_numericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // GridView_ProductRecord
+            // 
+            this.GridView_ProductRecord.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridView_ProductRecord.GridColor = System.Drawing.SystemColors.Control;
+            this.GridView_ProductRecord.Location = new System.Drawing.Point(2, 55);
+            this.GridView_ProductRecord.Name = "GridView_ProductRecord";
+            this.GridView_ProductRecord.RowHeadersVisible = false;
+            this.GridView_ProductRecord.Size = new System.Drawing.Size(400, 185);
+            this.GridView_ProductRecord.TabIndex = 66;
+            this.GridView_ProductRecord.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_ProductRecord_CellClick);
+            // 
+            // Add_Product_Button
+            // 
+            this.Add_Product_Button.Location = new System.Drawing.Point(317, 246);
+            this.Add_Product_Button.Name = "Add_Product_Button";
+            this.Add_Product_Button.Size = new System.Drawing.Size(85, 25);
+            this.Add_Product_Button.TabIndex = 9;
+            this.Add_Product_Button.Text = "Add";
+            this.Add_Product_Button.UseVisualStyleBackColor = true;
+            this.Add_Product_Button.Click += new System.EventHandler(this.Add_Product_Button_Click);
             // 
             // Phone_Inf_Label
             // 
@@ -365,16 +381,33 @@ namespace DBMS_Nhom3
             this.Phone_Inf_Label.TabIndex = 8;
             this.Phone_Inf_Label.Text = "Product Infomation";
             // 
-            // GridView_ProductRecord
+            // Product_Column
             // 
-            this.GridView_ProductRecord.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridView_ProductRecord.GridColor = System.Drawing.SystemColors.Control;
-            this.GridView_ProductRecord.Location = new System.Drawing.Point(13, 55);
-            this.GridView_ProductRecord.Name = "GridView_ProductRecord";
-            this.GridView_ProductRecord.RowHeadersVisible = false;
-            this.GridView_ProductRecord.Size = new System.Drawing.Size(400, 185);
-            this.GridView_ProductRecord.TabIndex = 66;
-            this.GridView_ProductRecord.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridView_ProductRecord_CellClick);
+            this.Product_Column.HeaderText = "Product";
+            this.Product_Column.MinimumWidth = 6;
+            this.Product_Column.Name = "Product_Column";
+            this.Product_Column.ReadOnly = true;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            // 
+            // Price_Column
+            // 
+            this.Price_Column.HeaderText = "Price (vnđ)";
+            this.Price_Column.MinimumWidth = 6;
+            this.Price_Column.Name = "Price_Column";
+            this.Price_Column.ReadOnly = true;
+            this.Price_Column.Width = 125;
+            // 
+            // Quantity_Column
+            // 
+            this.Quantity_Column.HeaderText = "Quantity";
+            this.Quantity_Column.MinimumWidth = 6;
+            this.Quantity_Column.Name = "Quantity_Column";
+            this.Quantity_Column.ReadOnly = true;
+            this.Quantity_Column.Width = 50;
             // 
             // Form_AddTrans
             // 
@@ -392,12 +425,14 @@ namespace DBMS_Nhom3
             this.Controls.Add(this.Phone_Info_Panel);
             this.Name = "Form_AddTrans";
             this.Text = "Form_AddTrans";
+            this.Load += new System.EventHandler(this.Form_AddTrans_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridView_Cart)).EndInit();
             this.Customer_Panel.ResumeLayout(false);
             this.Customer_Panel.PerformLayout();
             this.Phone_Info_Panel.ResumeLayout(false);
             this.Phone_Info_Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.quantity_numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridView_ProductRecord)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -410,7 +445,7 @@ namespace DBMS_Nhom3
         private System.Windows.Forms.DateTimePicker dtpk_BuyDate;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox Phone_Number_Textbox;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label product_label;
         private System.Windows.Forms.TextBox Address_Textbox;
         private System.Windows.Forms.TextBox Name_Textbox;
         private System.Windows.Forms.Panel panel3;
@@ -427,14 +462,17 @@ namespace DBMS_Nhom3
         private System.Windows.Forms.TextBox Total_Cost_Textbox;
         private System.Windows.Forms.Label Total_Price_Label;
         private System.Windows.Forms.DataGridView GridView_Cart;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Phone_Column;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price_Column;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity_Column;
         private System.Windows.Forms.Panel Customer_Panel;
         private System.Windows.Forms.Button Export_Button;
         private System.Windows.Forms.Panel Phone_Info_Panel;
-        private System.Windows.Forms.Button Add_Phone_Button;
+        private System.Windows.Forms.Button Add_Product_Button;
         private System.Windows.Forms.Label Phone_Inf_Label;
         private System.Windows.Forms.DataGridView GridView_ProductRecord;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown quantity_numericUpDown;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Product_Column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Price_Column;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity_Column;
     }
 }
