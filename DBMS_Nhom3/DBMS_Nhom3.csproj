@@ -59,11 +59,35 @@
       <DependentUpon>Change_Pass_frm.cs</DependentUpon>
     </Compile>
     <Compile Include="DBLayer\DBMain.cs" />
+    <Compile Include="deal_Result.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="deal_Result.Designer.cs">
+      <DependentUpon>deal_Result.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_AddTrans.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_AddTrans.Designer.cs">
       <DependentUpon>Form_AddTrans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Add_Company.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Add_Company.Designer.cs">
+      <DependentUpon>Form_Add_Company.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_add_Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_add_Product.Designer.cs">
+      <DependentUpon>Form_add_Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Edit_product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Edit_product.Designer.cs">
+      <DependentUpon>Form_Edit_product.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Home.cs">
       <SubType>Form</SubType>
@@ -83,6 +107,12 @@
     <Compile Include="Form_product.Designer.cs">
       <DependentUpon>Form_product.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_TransactionDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TransactionDetails.Designer.cs">
+      <DependentUpon>Form_TransactionDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manage_Staff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,8 +127,20 @@
     <EmbeddedResource Include="Change_Pass_frm.resx">
       <DependentUpon>Change_Pass_frm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="deal_Result.resx">
+      <DependentUpon>deal_Result.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_AddTrans.resx">
       <DependentUpon>Form_AddTrans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Add_Company.resx">
+      <DependentUpon>Form_Add_Company.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_add_Product.resx">
+      <DependentUpon>Form_add_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Edit_product.resx">
+      <DependentUpon>Form_Edit_product.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Home.resx">
       <DependentUpon>Form_Home.cs</DependentUpon>
@@ -108,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_product.resx">
       <DependentUpon>Form_product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_TransactionDetails.resx">
+      <DependentUpon>Form_TransactionDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage_Staff.resx">
       <DependentUpon>Manage_Staff.cs</DependentUpon>

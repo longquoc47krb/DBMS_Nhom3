@@ -24,23 +24,20 @@ namespace DBMS_Nhom3
 
         private void transactionDetailToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form_TransactionDetails trans_details = new Form_TransactionDetails();
+            trans_details.ShowDialog();
         }
 
         private void addNewPhoneToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form_add_Product add_Product = new Form_add_Product();
+            add_Product.ShowDialog();
         }
 
         private void phoneDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form_product f_product = new Form_product();
             f_product.ShowDialog();
-        }
-
-        private void infomationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void changePassWordToolStripMenuItem_Click(object sender, EventArgs e)

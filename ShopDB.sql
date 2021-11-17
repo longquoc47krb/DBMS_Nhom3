@@ -30,7 +30,7 @@ CREATE TABLE Product
 (
   Name_product VARCHAR(50) NOT NULL,
   ID_product INT NOT NULL,
-  Price VARCHAR(50) NOT NULL,
+  Price INT NOT NULL,
   ID_company INT NOT NULL,
   PRIMARY KEY (ID_product),
   FOREIGN KEY (ID_company) REFERENCES CongTySX(ID_company)

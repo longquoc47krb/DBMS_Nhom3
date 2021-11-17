@@ -33,9 +33,9 @@ namespace DBMS_Nhom3.BSLayer
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
 
-        public DataSet search_byCusname(string cusname)
+        public DataSet search_byPhone(string numphone)
         {
-            string sqltring = "select * from Customer, Product, Transaction_Details, Transactions where Customer.ID_customer = Transactions.ID_customer and Transactions.ID_transaction = Transaction_Details.ID_transaction and Transaction_Details.ID_product = Product.ID_product and Customer.Customer_Name like '" + cusname + "%'";
+            string sqltring = "select * from Customer, Product, Transaction_Details, Transactions where Customer.ID_customer = Transactions.ID_customer and Transactions.ID_transaction = Transaction_Details.ID_transaction and Transaction_Details.ID_product = Product.ID_product and Customer.PhoneNumber like '" + numphone + "%'";
             return db.ExcuteQueryDataSet(sqltring, CommandType.Text);
         }
         public DataSet search_byProduct(string productname)

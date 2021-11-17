@@ -36,10 +36,10 @@ namespace DBMS_Nhom3.BSLayer
         }
 
         // them phone
-        public bool addProduct(int ID_product,string name_product,int price,int id_company)
+        public bool addProduct(int ID_product,string name_product,string price,string id_company)
         {
 
-            string sqlString = "Insert Into Product Values(" + ID_product.ToString() + ",'" + name_product + "'," + price.ToString() + ","+id_company.ToString()+")";
+            string sqlString = "Insert Into dbo.Product Values('" + name_product  + "'," + ID_product.ToString() + "," + price+ ","+id_company+")";
 
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
 
@@ -47,19 +47,19 @@ namespace DBMS_Nhom3.BSLayer
         //xoa phone
         public bool deleteProduct(ref string err, string ID_product)
         {
-            string sqlString = "Delete From Product where ID_product = " + ID_product.ToString();
+            string sqlString = "Delete From dbo.Product where ID_product = " + ID_product;
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         // cap nhat phone
-        public bool updateProduct(int ID_product, string name_product, int price, int id_company)
+        public bool updateProduct(string ID_product, string name_product, string price, string id_company)
         {
-            string sqlString = "Update Phone Set Name_product = '" + name_product + "', Price = " + price.ToString() + " where ID_product = " + ID_product.ToString();
+            string sqlString = "Update dbo.Product Set Name_product = '" + name_product + "', Price = " + price +",ID_company = "+id_company + " where ID_product = " + ID_product;
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
 
         public DataSet search_ProductName(string name)
         {
-            string sqltring = "SELECT * FROM Product WHERE Name_product LIKE '" + name + "%'";
+            string sqltring = "SELECT * FROM dbo.Product WHERE Name_product LIKE '" + name + "%'";
             return db.ExcuteQueryDataSet(sqltring, CommandType.Text);
         }
     }

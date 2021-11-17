@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text;
+using System.Windows.Forms;
 
 namespace DBMS_Nhom3.DBLayer
 {
@@ -60,7 +61,15 @@ namespace DBMS_Nhom3.DBLayer
             comm.CommandType = ct;
             //try
             //{
-            comm.ExecuteNonQuery();
+            try
+            {
+                comm.ExecuteNonQuery();
+            }
+            catch(Exception err)
+            {
+                MessageBox.Show(err.ToString());
+            }
+            
             //System.Windows.Forms.MessageBox.Show("Successed");
             f = true;
 

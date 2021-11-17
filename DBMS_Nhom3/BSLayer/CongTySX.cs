@@ -14,7 +14,24 @@ namespace DBMS_Nhom3.BSLayer
         {
             db = new DBMain();
         }
-        public DataSet GetStaff()
+        public int returnMaxID()
+        {
+            string sqlString = "select max(ID_company) as max_id from CongTySX";
+            DataSet ds = db.ExcuteQueryDataSet(sqlString, CommandType.Text);
+            try
+            {
+                if (ds == null || ds.Tables.Count == 0 || ds.Tables[0].Rows.Count == 0)
+                    return 0;
+                else
+                    return int.Parse(ds.Tables[0].Rows[0]["max_id"].ToString());
+            }
+            catch (Exception error)
+            {
+                return 0;
+            }
+
+        }
+        public DataSet GetCompany()
         {
             return db.ExcuteQueryDataSet("select * from CongTySX", CommandType.Text);
         }
@@ -22,7 +39,10 @@ namespace DBMS_Nhom3.BSLayer
         {
             return db.ExcuteQueryDataSet("select * from CongTySX where Company_name Like '" + name + "%'", CommandType.Text);
         }
-
+        public DataSet FindCongTySX_byID(string id)
+        {
+            return db.ExcuteQueryDataSet("select * from CongTySX where ID_company = " + id, CommandType.Text);
+        }
 
         public bool addCompany(int id,string company_name, string address)
         {
