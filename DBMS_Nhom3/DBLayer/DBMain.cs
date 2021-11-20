@@ -34,13 +34,17 @@ namespace DBMS_Nhom3.DBLayer
 
             comm = conn.CreateCommand();
         }
+        static void conn_InfoMessage(object sender, SqlInfoMessageEventArgs e)
+        {
+            MessageBox.Show(e.Message);
+        }
+
         public DataSet ExcuteQueryDataSet(string strSQL, CommandType ct)
         {
             if (conn.State == ConnectionState.Open)
             {
                 conn.Close();
             }
-
             conn.Open();
             comm.CommandText = strSQL;
             comm.CommandType = ct;
@@ -57,13 +61,17 @@ namespace DBMS_Nhom3.DBLayer
                 conn.Close();
             }
             conn.Open();
+            conn.InfoMessage += new SqlInfoMessageEventHandler(conn_InfoMessage);
             comm.CommandText = strSQL;
             comm.CommandType = ct;
             //try
             //{
             try
             {
+                
                 comm.ExecuteNonQuery();
+                
+
             }
             catch(Exception err)
             {

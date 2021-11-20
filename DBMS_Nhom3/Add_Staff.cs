@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -15,12 +16,12 @@ namespace DBMS_Nhom3
         {
             InitializeComponent();
         }
+        
 
         private void Yes_Button_Click(object sender, EventArgs e)
         {
             BLStaff staff = new BLStaff();
             staff.addStaff(User_Textbox.Text, Pass_Textbox.Text,staffname_Textbox.Text,phone_Textbox.Text,address_Textbox.Text,position_Textbox.Text,gender_Textbox.Text);
-            this.Close();
         }
 
         private void Reset_Button_Click(object sender, EventArgs e)

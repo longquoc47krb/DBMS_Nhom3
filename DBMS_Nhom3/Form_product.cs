@@ -17,6 +17,7 @@ namespace DBMS_Nhom3
         string chosed_name = "";
         string chosed_price = "";
         string id_com = "";
+        string warranty_month = "";
         string x="";
         public Form_product()
         {
@@ -38,7 +39,7 @@ namespace DBMS_Nhom3
 
         private void btn_Edit_Click(object sender, EventArgs e)
         {
-            Form_Edit_product edit_pro = new Form_Edit_product(id_pro,chosed_name,chosed_price,id_com);
+            Form_Edit_product edit_pro = new Form_Edit_product(id_pro,chosed_name,chosed_price,id_com,warranty_month);
             edit_pro.ShowDialog();
             this.Controls.Clear();
             this.InitializeComponent();
@@ -74,6 +75,7 @@ namespace DBMS_Nhom3
                     chosed_name = GridView_ProductRecord.Rows[a].Cells[0].Value.ToString();
                     chosed_price = GridView_ProductRecord.Rows[a].Cells[2].Value.ToString();
                     id_com = GridView_ProductRecord.Rows[a].Cells[3].Value.ToString();
+                    warranty_month = GridView_ProductRecord.Rows[a].Cells[4].Value.ToString();
                     txt_ProductName.Text = GridView_ProductRecord.Rows[a].Cells[0].Value.ToString();
                     
                     //label3.Text = Phone_Id;

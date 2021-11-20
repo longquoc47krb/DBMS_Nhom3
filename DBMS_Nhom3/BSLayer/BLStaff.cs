@@ -50,7 +50,7 @@ namespace DBMS_Nhom3.BSLayer
 
         public bool ExistAccount(string user)
         {
-            string sqlcmm = "select * from Staff where username = '" + user + "'";
+            string sqlcmm = "select * from view_staff where username = '" + user + "'";
 
             DataSet ds = db.ExcuteQueryDataSet(sqlcmm, CommandType.Text);
 

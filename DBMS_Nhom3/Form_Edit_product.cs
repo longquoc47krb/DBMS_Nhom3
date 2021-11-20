@@ -17,22 +17,26 @@ namespace DBMS_Nhom3
         string name_product = "";
         string price = "";
         string id_company = "";
-        public Form_Edit_product(string id_pro, string name_pro, string price, string id_com)
+        string warranty_month = "";
+        public Form_Edit_product(string id_pro, string name_pro, string price, string id_com,string warranty)
         {
             InitializeComponent();
             this.ID_product = id_pro;
             this.name_product = name_pro;
             this.price = price;
             this.id_company = id_com;
+            this.warranty_month = warranty;
             txt_ProductName.Text = name_pro;
             txt_Price.Text = price;
             txt_IDCompany.Text = id_com;
             txt_ProductName.Enabled = false;
+            warrantyTxt.Text = warranty;
+            
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            edit_pro.updateProduct(this.ID_product, name_product, txt_Price.Text, id_company);
+            edit_pro.updateProduct(this.ID_product, name_product, txt_Price.Text, id_company,warrantyTxt.Text);
             this.Close();
         }
 

@@ -40,6 +40,8 @@ namespace DBMS_Nhom3
             this.label3 = new System.Windows.Forms.Label();
             this.add_company = new System.Windows.Forms.Button();
             this.txt_Company = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.warrantyTxt = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_comp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,7 +72,7 @@ namespace DBMS_Nhom3
             // txt_ProductName
             // 
             this.txt_ProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ProductName.Location = new System.Drawing.Point(194, 60);
+            this.txt_ProductName.Location = new System.Drawing.Point(212, 58);
             this.txt_ProductName.Name = "txt_ProductName";
             this.txt_ProductName.Size = new System.Drawing.Size(203, 26);
             this.txt_ProductName.TabIndex = 86;
@@ -80,7 +82,7 @@ namespace DBMS_Nhom3
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(49, 62);
+            this.label2.Location = new System.Drawing.Point(36, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(143, 24);
             this.label2.TabIndex = 77;
@@ -103,7 +105,7 @@ namespace DBMS_Nhom3
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(49, 124);
+            this.label12.Location = new System.Drawing.Point(36, 92);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(106, 24);
             this.label12.TabIndex = 97;
@@ -112,7 +114,7 @@ namespace DBMS_Nhom3
             // txt_Price
             // 
             this.txt_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Price.Location = new System.Drawing.Point(194, 124);
+            this.txt_Price.Location = new System.Drawing.Point(212, 92);
             this.txt_Price.Name = "txt_Price";
             this.txt_Price.Size = new System.Drawing.Size(203, 26);
             this.txt_Price.TabIndex = 98;
@@ -120,9 +122,9 @@ namespace DBMS_Nhom3
             // dataGridView_comp
             // 
             this.dataGridView_comp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_comp.Location = new System.Drawing.Point(53, 205);
+            this.dataGridView_comp.Location = new System.Drawing.Point(40, 205);
             this.dataGridView_comp.Name = "dataGridView_comp";
-            this.dataGridView_comp.Size = new System.Drawing.Size(344, 197);
+            this.dataGridView_comp.Size = new System.Drawing.Size(375, 197);
             this.dataGridView_comp.TabIndex = 100;
             this.dataGridView_comp.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_comp_CellClick);
             // 
@@ -131,7 +133,7 @@ namespace DBMS_Nhom3
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(49, 165);
+            this.label3.Location = new System.Drawing.Point(36, 167);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 24);
             this.label3.TabIndex = 101;
@@ -152,17 +154,38 @@ namespace DBMS_Nhom3
             // txt_Company
             // 
             this.txt_Company.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Company.Location = new System.Drawing.Point(194, 165);
+            this.txt_Company.Location = new System.Drawing.Point(212, 165);
             this.txt_Company.Name = "txt_Company";
             this.txt_Company.Size = new System.Drawing.Size(203, 26);
             this.txt_Company.TabIndex = 103;
             this.txt_Company.TextChanged += new System.EventHandler(this.txt_Company_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(36, 129);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(166, 24);
+            this.label4.TabIndex = 104;
+            this.label4.Text = "warranty (month)";
+            // 
+            // warrantyTxt
+            // 
+            this.warrantyTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warrantyTxt.Location = new System.Drawing.Point(212, 129);
+            this.warrantyTxt.Name = "warrantyTxt";
+            this.warrantyTxt.Size = new System.Drawing.Size(203, 26);
+            this.warrantyTxt.TabIndex = 105;
             // 
             // Form_add_Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(439, 450);
+            this.Controls.Add(this.warrantyTxt);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_Company);
             this.Controls.Add(this.add_company);
             this.Controls.Add(this.label3);
@@ -195,5 +218,7 @@ namespace DBMS_Nhom3
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button add_company;
         private System.Windows.Forms.TextBox txt_Company;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox warrantyTxt;
     }
 }

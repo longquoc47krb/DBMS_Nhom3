@@ -21,7 +21,7 @@ namespace DBMS_Nhom3
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
-            new_pro.addProduct(new_pro.returnMaxID() + 1, txt_ProductName.Text, txt_Price.Text,idcom);
+            new_pro.addProduct(txt_ProductName.Text, txt_Price.Text,idcom,warrantyTxt.Text);
             this.Controls.Clear();
             this.InitializeComponent();
             LoadData();

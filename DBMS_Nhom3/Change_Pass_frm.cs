@@ -22,8 +22,10 @@ namespace DBMS_Nhom3
             if (Form_Login.currentPass == Old_pass_textbox.Text)
             {
                 bLStaff.updateAccount(Form_Login.currentAccount, New_pass_textbox.Text, ref x);
-                MessageBox.Show("Doi Thanh Cong");
+                Form_Login.currentPass = New_pass_textbox.Text;
                 this.Close();
+
+
             }
             else
             {
