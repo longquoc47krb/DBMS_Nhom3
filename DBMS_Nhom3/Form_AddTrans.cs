@@ -117,7 +117,7 @@ namespace DBMS_Nhom3
             }
             else
             {
-                MessageBox.Show("An image Phone ?");
+                MessageBox.Show("Vui lòng chọn sản phẩm");
             }
         }
 
