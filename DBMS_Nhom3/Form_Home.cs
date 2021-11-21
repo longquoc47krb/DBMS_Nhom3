@@ -89,5 +89,10 @@ namespace DBMS_Nhom3
             Form_warranty warranty = new Form_warranty();
             warranty.ShowDialog();
         }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

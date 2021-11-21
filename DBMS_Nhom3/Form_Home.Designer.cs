@@ -35,12 +35,13 @@ namespace DBMS_Nhom3
             this.transactionDetailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phoneDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.warrantyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.revenueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePassWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.revenueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.warrantyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_Home.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,12 +90,27 @@ namespace DBMS_Nhom3
             this.phoneDetailsToolStripMenuItem.Text = "product components details";
             this.phoneDetailsToolStripMenuItem.Click += new System.EventHandler(this.phoneDetailsToolStripMenuItem_Click);
             // 
+            // warrantyToolStripMenuItem
+            // 
+            this.warrantyToolStripMenuItem.Name = "warrantyToolStripMenuItem";
+            this.warrantyToolStripMenuItem.Size = new System.Drawing.Size(90, 25);
+            this.warrantyToolStripMenuItem.Text = "warranty";
+            this.warrantyToolStripMenuItem.Click += new System.EventHandler(this.warrantyToolStripMenuItem_Click);
+            // 
+            // revenueToolStripMenuItem
+            // 
+            this.revenueToolStripMenuItem.Name = "revenueToolStripMenuItem";
+            this.revenueToolStripMenuItem.Size = new System.Drawing.Size(88, 25);
+            this.revenueToolStripMenuItem.Text = "Revenue";
+            this.revenueToolStripMenuItem.Click += new System.EventHandler(this.revenueToolStripMenuItem_Click);
+            // 
             // accountToolStripMenuItem
             // 
             this.accountToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.changePassWordToolStripMenuItem,
             this.addNewAccountToolStripMenuItem,
-            this.manageToolStripMenuItem});
+            this.manageToolStripMenuItem,
+            this.logOutToolStripMenuItem});
             this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
             this.accountToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
             this.accountToolStripMenuItem.Text = "Account";
@@ -121,19 +137,12 @@ namespace DBMS_Nhom3
             this.manageToolStripMenuItem.Text = "Manage";
             this.manageToolStripMenuItem.Click += new System.EventHandler(this.manageToolStripMenuItem_Click);
             // 
-            // revenueToolStripMenuItem
+            // logOutToolStripMenuItem
             // 
-            this.revenueToolStripMenuItem.Name = "revenueToolStripMenuItem";
-            this.revenueToolStripMenuItem.Size = new System.Drawing.Size(88, 25);
-            this.revenueToolStripMenuItem.Text = "Revenue";
-            this.revenueToolStripMenuItem.Click += new System.EventHandler(this.revenueToolStripMenuItem_Click);
-            // 
-            // warrantyToolStripMenuItem
-            // 
-            this.warrantyToolStripMenuItem.Name = "warrantyToolStripMenuItem";
-            this.warrantyToolStripMenuItem.Size = new System.Drawing.Size(90, 25);
-            this.warrantyToolStripMenuItem.Text = "warranty";
-            this.warrantyToolStripMenuItem.Click += new System.EventHandler(this.warrantyToolStripMenuItem_Click);
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
+            this.logOutToolStripMenuItem.Text = "Log Out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // Form_Home
             // 
@@ -164,5 +173,6 @@ namespace DBMS_Nhom3
         private System.Windows.Forms.ToolStripMenuItem manageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem warrantyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem revenueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
     }
 }
