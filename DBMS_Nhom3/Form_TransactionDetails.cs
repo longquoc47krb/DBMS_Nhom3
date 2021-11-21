@@ -27,15 +27,15 @@ namespace DBMS_Nhom3
         void LoadData()
         {
             GridView_Details_Trans.DataSource = transaction_Detail.getTransaction_details().Tables[0];
-            GridView_Details_Trans.Columns[14].HeaderText = "Seller";
+            
 
             //// Ẩn các dòng ko cần thiết
 
-            GridView_Details_Trans.Columns[9].Visible = false;
-            GridView_Details_Trans.Columns[10].Visible = false;
-            GridView_Details_Trans.Columns[11].Visible = false;
-            GridView_Details_Trans.Columns[12].Visible = false;
-            GridView_Details_Trans.Columns[13].Visible = false;
+            //GridView_Details_Trans.Columns[9].Visible = false;
+            //GridView_Details_Trans.Columns[10].Visible = false;
+            //GridView_Details_Trans.Columns[11].Visible = false;
+            //GridView_Details_Trans.Columns[12].Visible = false;
+            //GridView_Details_Trans.Columns[13].Visible = false;
 
             GridView_Details_Trans.AutoResizeColumns();
         }
@@ -48,8 +48,8 @@ namespace DBMS_Nhom3
                 if (GridView_Details_Trans.Rows[a].Cells[8].Value != null)
                 {
                     // gán model name trong datagridview đã chọn
-                    idtrans = GridView_Details_Trans.Rows[a].Cells[8].Value.ToString();
-                    txt_PhoneFind.Text = GridView_Details_Trans.Rows[a].Cells[1].Value.ToString();
+                    idtrans = GridView_Details_Trans.Rows[a].Cells[0].Value.ToString();
+                    txt_PhoneFind.Text = GridView_Details_Trans.Rows[a].Cells[2].Value.ToString();
                     GridView_Details_Trans.Rows.Clear();
                     GridView_Details_Trans.Refresh();
                 }

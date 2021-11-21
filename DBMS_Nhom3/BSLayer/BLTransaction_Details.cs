@@ -17,7 +17,7 @@ namespace DBMS_Nhom3.BSLayer
 
         public DataSet getTransaction_details()
         {
-            string sqlString = "select * from Customer, Product, Transaction_Details, Transactions where Customer.ID_customer = Transactions.ID_customer and Transactions.ID_transaction = Transaction_Details.ID_transaction and Transaction_Details.ID_product = Product.ID_product";
+            string sqlString = "select * from viewTrans_details";
             return db.ExcuteQueryDataSet(sqlString, CommandType.Text);
         }
 
@@ -35,18 +35,18 @@ namespace DBMS_Nhom3.BSLayer
 
         public DataSet search_byPhone(string numphone)
         {
-            string sqltring = "select * from Customer, Product, Transaction_Details, Transactions where Customer.ID_customer = Transactions.ID_customer and Transactions.ID_transaction = Transaction_Details.ID_transaction and Transaction_Details.ID_product = Product.ID_product and Customer.PhoneNumber like '" + numphone + "%'";
+            string sqltring = "select * from viewTrans_details where PhoneNumber like '" + numphone + "%'";
             return db.ExcuteQueryDataSet(sqltring, CommandType.Text);
         }
         public DataSet search_byProduct(string productname)
         {
-            string sqltring = "select * from Customer, Product, Transaction_Details, Transactions where Customer.ID_customer = Transactions.ID_customer and Transactions.ID_transaction = Transaction_Details.ID_transaction and Transaction_Details.ID_product = Product.ID_product and Product.Name_product like '" + productname + "%'";
+            string sqltring = "select * from viewTrans_details where Name_product like '" + productname + "%'";
             return db.ExcuteQueryDataSet(sqltring, CommandType.Text);
         }
 
         public DataSet search_byDate(string date)
         {
-            string sqltring = "select * from Customer, Product, Transaction_Details, Transactions where Customer.ID_customer = Transactions.ID_customer and Transactions.ID_transaction = Transaction_Details.ID_transaction and Transaction_Details.ID_Product = Product.ID_Product and Transactions.Date = '" + date + "%'";
+            string sqltring = "select * from viewTrans_details where Dates = CONVERT(datetime,'"+ date + "',103)";
             return db.ExcuteQueryDataSet(sqltring, CommandType.Text);
         }
 
