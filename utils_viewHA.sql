@@ -16,4 +16,3 @@ from Customer,Transactions,Transaction_Details,Product
 where Customer.ID_customer = Transactions.ID_customer and Transaction_Details.ID_transaction = Transactions.ID_transaction 
 and Transaction_Details.ID_product = Product.ID_product and DATEDIFF(MONTH,Transactions.Dates,GETDATE()) < Product.warranty_month
 
-
