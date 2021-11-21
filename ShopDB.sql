@@ -3,6 +3,7 @@ CREATE TABLE Customer
   Customer_Name VARCHAR(50) NOT NULL,
   PhoneNumber VARCHAR(50) NOT NULL,
   ID_customer INT NOT NULL,
+  VIP INT NULL,
   PRIMARY KEY (ID_customer)
 );
 
