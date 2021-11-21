@@ -1,5 +1,4 @@
 ﻿/*Tạo view chi tiết transaction details*/
-drop view viewTrans_details
 create view viewTrans_details
 as
 select Transactions.ID_transaction,Customer_Name,PhoneNumber,VIP,Product.ID_product,Name_product,Price,quantity,warranty_month,Dates,username as seller
@@ -7,7 +6,6 @@ from Customer, Product, Transaction_Details, Transactions
 where Customer.ID_customer = Transactions.ID_customer and Transactions.ID_transaction = Transaction_Details.ID_transaction and Transaction_Details.ID_product = Product.ID_product
 
 /*Tạo funtion return maxid transaction*/
-drop function IDmaxTrans
 create function IDmaxTrans()
 RETURNS int 
 as
@@ -21,7 +19,6 @@ begin
 end
 
 /*Tạo trigger thêm transaction*/
-drop trigger Trig_addTrans
 create trigger Trig_addTrans on Transactions
 instead of insert
 as

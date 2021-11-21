@@ -1,6 +1,5 @@
 ﻿
 /*Thêm trigger thông báo thêm staff thành công*/
-drop trigger tg_addStaff;
 create trigger tg_addStaff on Staff
 instead of insert
 as
@@ -22,7 +21,6 @@ end
 
 
 /*Thêm trigger thông báo cập nhật thành công*/
-drop trigger tg_updateStaff 
 create trigger tg_updateStaff  on Staff
 instead of update
 as
@@ -47,7 +45,6 @@ end
 
 
 /*Thêm trigger thông báo xóa thành công staff*/
-drop trigger tg_deleteStaff 
 create trigger tg_deleteStaff  on Staff
 after delete
 as
@@ -56,6 +53,5 @@ begin
 end
 
 /*Tạo view*/
-drop view view_staff
 create view view_staff as
 select * from staff

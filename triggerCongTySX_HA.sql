@@ -1,5 +1,4 @@
 ﻿/*Func tìm MaxID CongTySX*/
-drop function IDmaxCompany
 create function IDmaxCompany()
 RETURNS int 
 as
@@ -13,7 +12,6 @@ begin
 end
 
 /*Trigger thêm company*/
-drop trigger trig_addCompany
 create trigger trig_addCompany on CongTySX
 instead of insert
 as

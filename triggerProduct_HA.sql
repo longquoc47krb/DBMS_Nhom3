@@ -1,5 +1,4 @@
 ﻿/*Func tìm MaxID product*/
-drop function IDmaxProduct
 create function IDmaxProduct()
 RETURNS int 
 as
@@ -13,7 +12,6 @@ begin
 end
 
 /*Trigger thêm product*/
-drop trigger trig_addProduct
 create trigger trig_addProduct on Product
 instead of insert
 as
@@ -33,7 +31,6 @@ end
 
 
 /*Trigger update product*/
-drop trigger trig_updateProduct
 create trigger trig_updateProduct on Product
 instead of update
 as
@@ -48,7 +45,6 @@ begin
 end
 
 /*Trigger xóa product*/
-drop trigger tg_deleteProduct
 create trigger tg_deleteProduct  on Product
 after delete
 as

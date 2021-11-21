@@ -22,9 +22,10 @@ namespace DBMS_Nhom3
         {
             BLStaff staff = new BLStaff();
             staff.addStaff(User_Textbox.Text, Pass_Textbox.Text,staffname_Textbox.Text,phone_Textbox.Text,address_Textbox.Text,position_Textbox.Text,gender_Textbox.Text);
+            reset();
         }
 
-        private void Reset_Button_Click(object sender, EventArgs e)
+        private void reset()
         {
             User_Textbox.Text = "";
             Pass_Textbox.Text = "";
@@ -34,6 +35,10 @@ namespace DBMS_Nhom3
             address_Textbox.Text = "";
             position_Textbox.Text = "";
             gender_Textbox.Text = "";
+        }
+        private void Reset_Button_Click(object sender, EventArgs e)
+        {
+            reset();
         }
     }
 }
