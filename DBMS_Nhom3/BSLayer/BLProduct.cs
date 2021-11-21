@@ -16,7 +16,7 @@ namespace DBMS_Nhom3.BSLayer
         }
         public DataSet GetProduct()
         {
-            return db.ExcuteQueryDataSet("select * from Product", CommandType.Text);
+            return db.ExcuteQueryDataSet("select * from view_product", CommandType.Text);
         }
 
 
@@ -29,7 +29,7 @@ namespace DBMS_Nhom3.BSLayer
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
 
         }
-        //xoa phone
+        //xoa phone 
         public bool deleteProduct(ref string err, string ID_product)
         {
             string sqlString = "Delete From dbo.Product where ID_product = " + ID_product;

@@ -31,7 +31,6 @@ begin
 	end catch	
 end
 
-insert into Product values('a',dbo.IDmaxProduct(),10,10,10)
 
 /*Trigger update product*/
 drop trigger trig_updateProduct
@@ -47,4 +46,17 @@ begin
 	where Name_product = @name
 	PRINT N'Cập nhật thành công'
 end
+
+/*Trigger xóa product*/
+drop trigger tg_deleteProduct
+create trigger tg_deleteProduct  on Product
+after delete
+as
+begin
+	print N'Xóa thành công'
+end
+
+/*Tạo view*/
+create view view_product
+as select * from Product
 
