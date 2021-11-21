@@ -33,6 +33,7 @@ CREATE TABLE Product
   ID_product INT NOT NULL,
   Price INT NOT NULL,
   ID_company INT NOT NULL,
+  warranty_month INT NULL,
   PRIMARY KEY (ID_product),
   FOREIGN KEY (ID_company) REFERENCES CongTySX(ID_company)
 );
