@@ -60,4 +60,3 @@ begin
 		PRINT N'Không có sản phẩm nào trong giỏ hàng'
 end
 
-

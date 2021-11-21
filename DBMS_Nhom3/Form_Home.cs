@@ -72,5 +72,22 @@ namespace DBMS_Nhom3
             }
 
         }
+
+        private void accountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void revenueToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_monthRevenue frmRe = new Form_monthRevenue();
+            frmRe.ShowDialog();
+        }
+
+        private void warrantyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_warranty warranty = new Form_warranty();
+            warranty.ShowDialog();
+        }
     }
 }

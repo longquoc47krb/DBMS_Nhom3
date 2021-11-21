@@ -39,6 +39,8 @@ namespace DBMS_Nhom3
             this.changePassWordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addNewAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.revenueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.warrantyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_Home.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,10 +52,12 @@ namespace DBMS_Nhom3
             this.transactionDetailToolStripMenuItem,
             this.addNewProductToolStripMenuItem,
             this.phoneDetailsToolStripMenuItem,
+            this.warrantyToolStripMenuItem,
+            this.revenueToolStripMenuItem,
             this.accountToolStripMenuItem});
             this.menu_Home.Location = new System.Drawing.Point(0, 0);
             this.menu_Home.Name = "menu_Home";
-            this.menu_Home.Size = new System.Drawing.Size(1027, 29);
+            this.menu_Home.Size = new System.Drawing.Size(1081, 29);
             this.menu_Home.TabIndex = 2;
             this.menu_Home.Text = "menuStrip1";
             // 
@@ -94,6 +98,7 @@ namespace DBMS_Nhom3
             this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
             this.accountToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
             this.accountToolStripMenuItem.Text = "Account";
+            this.accountToolStripMenuItem.Click += new System.EventHandler(this.accountToolStripMenuItem_Click);
             // 
             // changePassWordToolStripMenuItem
             // 
@@ -116,12 +121,26 @@ namespace DBMS_Nhom3
             this.manageToolStripMenuItem.Text = "Manage";
             this.manageToolStripMenuItem.Click += new System.EventHandler(this.manageToolStripMenuItem_Click);
             // 
+            // revenueToolStripMenuItem
+            // 
+            this.revenueToolStripMenuItem.Name = "revenueToolStripMenuItem";
+            this.revenueToolStripMenuItem.Size = new System.Drawing.Size(88, 25);
+            this.revenueToolStripMenuItem.Text = "Revenue";
+            this.revenueToolStripMenuItem.Click += new System.EventHandler(this.revenueToolStripMenuItem_Click);
+            // 
+            // warrantyToolStripMenuItem
+            // 
+            this.warrantyToolStripMenuItem.Name = "warrantyToolStripMenuItem";
+            this.warrantyToolStripMenuItem.Size = new System.Drawing.Size(90, 25);
+            this.warrantyToolStripMenuItem.Text = "warranty";
+            this.warrantyToolStripMenuItem.Click += new System.EventHandler(this.warrantyToolStripMenuItem_Click);
+            // 
             // Form_Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1027, 450);
+            this.ClientSize = new System.Drawing.Size(1081, 450);
             this.Controls.Add(this.menu_Home);
             this.Name = "Form_Home";
             this.Text = "Form_Home";
@@ -143,5 +162,7 @@ namespace DBMS_Nhom3
         private System.Windows.Forms.ToolStripMenuItem changePassWordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewAccountToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem warrantyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem revenueToolStripMenuItem;
     }
 }

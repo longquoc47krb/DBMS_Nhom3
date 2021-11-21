@@ -46,6 +46,7 @@
     <Compile Include="Add_Staff.Designer.cs">
       <DependentUpon>Add_Staff.cs</DependentUpon>
     </Compile>
+    <Compile Include="BSLayer\BLUtils.cs" />
     <Compile Include="BSLayer\BLStaff.cs" />
     <Compile Include="BSLayer\BLCustomers.cs" />
     <Compile Include="BSLayer\BLProduct.cs" />
@@ -101,6 +102,12 @@
     <Compile Include="Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_monthRevenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_monthRevenue.Designer.cs">
+      <DependentUpon>Form_monthRevenue.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_product.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +119,12 @@
     </Compile>
     <Compile Include="Form_TransactionDetails.Designer.cs">
       <DependentUpon>Form_TransactionDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_warranty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_warranty.Designer.cs">
+      <DependentUpon>Form_warranty.cs</DependentUpon>
     </Compile>
     <Compile Include="Manage_Staff.cs">
       <SubType>Form</SubType>
@@ -148,11 +161,17 @@
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_monthRevenue.resx">
+      <DependentUpon>Form_monthRevenue.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_product.resx">
       <DependentUpon>Form_product.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_TransactionDetails.resx">
       <DependentUpon>Form_TransactionDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_warranty.resx">
+      <DependentUpon>Form_warranty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage_Staff.resx">
       <DependentUpon>Manage_Staff.cs</DependentUpon>
