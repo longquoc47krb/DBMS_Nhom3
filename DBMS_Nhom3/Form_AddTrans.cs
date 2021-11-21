@@ -16,9 +16,9 @@ namespace DBMS_Nhom3
         BLTransaction transactions = new BLTransaction();
         BLTransaction_Details trans_details = new BLTransaction_Details();
         string name_chosed = "";
-        string id_Currentproduct="";
+        string id_Currentproduct = "";
         string price = "";
-
+        string x = "";
         private int Total_cost = 0;
         // biến trỏ giá trị trong datagridvieww
         private int index;
@@ -153,52 +153,70 @@ namespace DBMS_Nhom3
 
         private void Export_Button_Click(object sender, EventArgs e)
         {
-            DataSet da = new DataSet();
-            da = customers.FindCustomer(Name_Textbox.Text, Phone_Number_Textbox.Text);
-            // kiểm tra nêu khách hàng đã tồn tại
-            if (da.Tables[0].Rows.Count > 0)
+            if ((product_ID_buying.Count > 0) && (Name_Textbox.Text!="") &&(Phone_Number_Textbox.Text!=""))
             {
-                //MessageBox.Show(da.Tables[0].Rows[0][3].ToString());
-                transactions.addTransaction(transactions.returnMaxID() + 1, Total_cost, dtpk_BuyDate.Value.ToString(), int.Parse(da.Tables[0].Rows[0][2].ToString()), Form_Login.currentAccount);
+                DataSet da = new DataSet();
+                da = customers.FindCustomer(Name_Textbox.Text, Phone_Number_Textbox.Text);
+                // kiểm tra nêu khách hàng đã tồn tại
+                if (da.Tables[0].Rows.Count > 0)
+                {
+                    //MessageBox.Show(da.Tables[0].Rows[0][3].ToString());
+                    if((customers.isVip(Phone_Number_Textbox.Text) == 1) || (Total_cost > 100000000))
+                    {
+                        Total_cost = (int)((float)Total_cost - (float)Total_cost * 0.05);
+                    }
+                    transactions.addTransaction(transactions.returnMaxID() + 1, Total_cost, dtpk_BuyDate.Value.ToString(), da.Tables[0].Rows[0][2].ToString(), Form_Login.currentAccount);
+
+                }
+                else
+                {
+                    customers.addCustomer(Name_Textbox.Text, Phone_Number_Textbox.Text);
+                    if (Total_cost > 100000000)
+                    {
+                        Total_cost = (int)((float)Total_cost - (float)Total_cost * 0.05);
+                        transactions.addTransaction(transactions.returnMaxID() + 1, Total_cost, dtpk_BuyDate.Value.ToString(), customers.returnMaxID().ToString(), Form_Login.currentAccount);
+                    }
+                    else
+                    {
+                        transactions.addTransaction(transactions.returnMaxID() + 1, Total_cost, dtpk_BuyDate.Value.ToString(), customers.returnMaxID().ToString(), Form_Login.currentAccount);
+                    }
+                }
+                // int index_Row = 0;
+                for (int i = 0; i < product_ID_buying.Count; i++)
+                {
+                    trans_details.addTransaction_details((GridView_Cart[3, i].Value.ToString()), transactions.returnMaxID().ToString(), product_ID_buying[i]);
+                }
+                deal_Result deal_Result = new deal_Result(transactions.returnMaxID(), Total_cost);
+                deal_Result.ShowDialog();
+                
             }
             else
             {
-                customers.addCustomer(Name_Textbox.Text, Phone_Number_Textbox.Text);
-                transactions.addTransaction(transactions.returnMaxID() + 1, Total_cost, dtpk_BuyDate.Value.ToString(), customers.returnMaxID(), Form_Login.currentAccount);
+                MessageBox.Show("Lỗi");
             }
-            // int index_Row = 0;
-            for (int i = 0; i < product_ID_buying.Count; i++)
-            {
-                trans_details.addTransaction_details((GridView_Cart[3, i].Value.ToString()), transactions.returnMaxID().ToString(), product_ID_buying[i]);
-            }
-            deal_Result deal_Result = new deal_Result(transactions.returnMaxID());
-            deal_Result.ShowDialog();
-            Total_cost = 0;
-            Total_Cost_Textbox.Text = "";
             clearall_form();
+
+
         }
         void clearall_form()
         {
-            foreach (var c in Customer_Panel.Controls)
-            {
-                if (c is TextBox)
-                {
-                    (c as TextBox).Text = "";
-                }
-            }
-            foreach (var c in Phone_Info_Panel.Controls)
-            {
-                if (c is TextBox)
-                {
-                    (c as TextBox).Text = "";
-                }
-                quantity_numericUpDown.Value = 1;
-            }
-            GridView_Cart.Rows.Clear();
-            GridView_Cart.Refresh();
+            Total_cost = 0;
+            name_chosed = "";
+            id_Currentproduct = "";
+            price = "";
+            this.Controls.Clear();
+            this.InitializeComponent();
+            product_name_buying = new List<string>();
+            product_ID_buying = new List<string>();
+            LoadData();
         }
 
         private void Customer_Panel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
 
         }

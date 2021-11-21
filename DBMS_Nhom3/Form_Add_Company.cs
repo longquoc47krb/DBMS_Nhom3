@@ -41,8 +41,9 @@ namespace DBMS_Nhom3
             }
             else
             {
-                new_comp.addCompany(new_comp.returnMaxID()+1, txt_CompName.Text, txt_address.Text);
+                new_comp.addCompany(txt_CompName.Text, txt_address.Text);
                 this.Close();
+                
             }
         }
     }

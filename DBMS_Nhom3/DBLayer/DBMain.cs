@@ -70,7 +70,8 @@ namespace DBMS_Nhom3.DBLayer
             {
                 
                 comm.ExecuteNonQuery();
-                
+                conn.InfoMessage -= new SqlInfoMessageEventHandler(conn_InfoMessage);
+
 
             }
             catch(Exception err)

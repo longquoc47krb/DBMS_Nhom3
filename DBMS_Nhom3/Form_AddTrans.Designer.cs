@@ -29,6 +29,7 @@ namespace DBMS_Nhom3
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_AddTrans));
             this.label5 = new System.Windows.Forms.Label();
             this.dtpk_BuyDate = new System.Windows.Forms.DateTimePicker();
@@ -52,6 +53,7 @@ namespace DBMS_Nhom3
             this.Price_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity_Column = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Customer_Panel = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.Export_Button = new System.Windows.Forms.Button();
             this.Phone_Info_Panel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -59,7 +61,7 @@ namespace DBMS_Nhom3
             this.GridView_ProductRecord = new System.Windows.Forms.DataGridView();
             this.Add_Product_Button = new System.Windows.Forms.Button();
             this.Phone_Inf_Label = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridView_Cart)).BeginInit();
             this.Customer_Panel.SuspendLayout();
@@ -290,6 +292,14 @@ namespace DBMS_Nhom3
             this.Customer_Panel.TabIndex = 28;
             this.Customer_Panel.Paint += new System.Windows.Forms.PaintEventHandler(this.Customer_Panel_Paint);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.panel3.Location = new System.Drawing.Point(72, 102);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(270, 1);
+            this.panel3.TabIndex = 7;
+            // 
             // Export_Button
             // 
             this.Export_Button.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Export_Button.BackgroundImage")));
@@ -371,13 +381,11 @@ namespace DBMS_Nhom3
             this.Phone_Inf_Label.TabIndex = 8;
             this.Phone_Inf_Label.Text = "Product Infomation";
             // 
-            // panel3
+            // contextMenuStrip1
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.panel3.Location = new System.Drawing.Point(72, 102);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(270, 1);
-            this.panel3.TabIndex = 7;
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // Form_AddTrans
             // 
@@ -441,5 +449,6 @@ namespace DBMS_Nhom3
         private System.Windows.Forms.DataGridViewTextBoxColumn Price_Column;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity_Column;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

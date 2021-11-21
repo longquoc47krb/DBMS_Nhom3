@@ -46,11 +46,29 @@ namespace DBMS_Nhom3.BSLayer
             }
 
         }
+        public int isVip(string phonenumber)
+        {
+            string sqlString = "select VIP from Customer where PhoneNumber = '" + phonenumber + "'";
+            DataSet ds = db.ExcuteQueryDataSet(sqlString, CommandType.Text);
+            try
+            {
+                if (ds == null || ds.Tables.Count == 0 || ds.Tables[0].Rows.Count == 0)
+                    return -1;
+                else
+                    return int.Parse(ds.Tables[0].Rows[0]["VIP"].ToString());
+
+
+            }
+            catch (Exception error)
+            {
+                return -1;
+            }
+        }
 
         // them phone
         public bool addCustomer(string cusname, string phonenumber)
         {
-            string sqlString = "Insert Into Customer Values('" + cusname + "','" + phonenumber + "'," + (returnMaxID()+1).ToString() + ")";
+            string sqlString = "insert into Customer(Customer_Name,PhoneNumber,ID_customer) Values('" + cusname + "','" + phonenumber + "',dbo.IDmaxCustomer()+1)";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         //xoa phone

@@ -12,16 +12,20 @@ namespace DBMS_Nhom3
     public partial class deal_Result : Form
     {
         private int Trans_id;
-        public deal_Result(int id)
+        public deal_Result(int id,int total)
         {
             InitializeComponent();
             Trans_id = id;
+            txt_Total.Text = total.ToString();
+            
         }
 
         private void deal_Result_Load(object sender, EventArgs e)
         {
             BLTransaction_Details transaction_Detail = new BLTransaction_Details();
             dataGridView1.DataSource = transaction_Detail.search_byTrans_ID(Trans_id).Tables[0];
+            
+            dataGridView1.Columns[4].Visible = false;
         }
     }
 }

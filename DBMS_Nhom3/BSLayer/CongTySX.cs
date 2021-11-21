@@ -44,10 +44,10 @@ namespace DBMS_Nhom3.BSLayer
             return db.ExcuteQueryDataSet("select * from CongTySX where ID_company = " + id, CommandType.Text);
         }
 
-        public bool addCompany(int id,string company_name, string address)
+        public bool addCompany(string company_name, string address)
         {
 
-            string sqlString = "Insert Into CongTySX Values(" + id + ",'" + company_name + "','" + address + "')";
+            string sqlString = "Insert Into CongTySX Values(dbo.IDmaxCompany()+1,'" + company_name + "','" + address + "')";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
         //xoa phone
