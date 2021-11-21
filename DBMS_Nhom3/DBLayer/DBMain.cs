@@ -9,7 +9,7 @@ namespace DBMS_Nhom3.DBLayer
 {
     class DBMain
     {
-        string Connstr = "Data Source=PC-RTX3060Ti;Initial Catalog=ShopDB;Integrated Security=True"; // thêm conn, khi chạy cần sửa lại data string
+        string Connstr = "Data Source=localhost;Initial Catalog=ShopDB;Integrated Security=True"; // thêm conn, khi chạy cần sửa lại data string
         SqlConnection conn = null;
         SqlCommand comm = null;
         SqlDataAdapter da = null;
